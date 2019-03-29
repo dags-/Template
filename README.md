@@ -58,8 +58,8 @@ template.apply(context, System.out);
 
 #### Getter value rendering:
 ```
-Supplier<String> supplier = () -> "Garry";
 Template template = Template.parse("Hello {user|{get}}!");
+Supplier<String> supplier = () -> "Garry";
 Context context = Context.of("user", supplier);
 
 // prints "Hello Garry!"
