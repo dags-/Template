@@ -44,7 +44,8 @@ Context context = Context.of("name", "World");
 // prints "Hello World!"
 template.apply(context, System.out);
 ```
-_The context object is just a Map<String, Object>. We can use any object for rendering provided the expected getters are accessible_
+_The context object is just a Map<String, Object>_  
+_We can use any object for rendering providing the expected getters are accessible._
 
 #### Nested value rendering:
 ```
@@ -64,7 +65,7 @@ Context context = Context.of("user", supplier);
 // prints "Hello Garry!"
 template.apply(context, System.out);
 ```
-_The template reflectively calls 'Suppier.get()' to retrieve the value_
+_The template reflectively calls 'Suppier.get()' to retrieve the value._
 
 #### Iterable value rendering:
 ```
