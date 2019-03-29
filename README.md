@@ -69,9 +69,10 @@ _The template reflectively calls 'Suppier.get()' to retrieve the value._
 
 #### Iterable value rendering:
 ```
-Template template = Template.parse("My list: {list|**{.}**|, }");
-Context context = Context.of("list", Arrays.asList("one", "two", "three"));
+Template template = Template.parse("Names: {people|**{get}**|, }");
+List<Supplier<String>> list = Arrays.asList(() -> "Garry", () -> "Larry", () -> "Harry");
+Context context = Context.of("people", list);
 
-// prints "My list: **one**, **two**, **three**"
+// prints "Names: **Garry**, **Larry**, **Harry**
 template.apply(context, System.out);
 ```
