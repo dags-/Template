@@ -54,6 +54,17 @@ Context context = Context.of("user", Context.of("name", "Harry"));
 template.apply(context, System.out);
 ```
 
+#### Getter value rendering:
+```
+Supplier<String> supplier = () -> "Garry";
+Template template = Template.parse("Hello {user|{get}}!");
+Context context = Context.of("user", supplier);
+
+// prints "Hello Garry!"
+template.apply(context, System.out);
+```
+_The template reflectively calls 'Suppier.get()' to retrieve the value_
+
 #### Iterable value rendering:
 ```
 Template template = Template.parse("My list: {list|**{.}**|, }");
