@@ -8,21 +8,15 @@ public class CharReader {
     public static final char EOF = (char) -1;
 
     private final Reader reader;
-    private final StringBuilder raw;
 
     private int value = -1;
 
     public CharReader(String string) {
-        this(new java.io.StringReader(string), string.length());
+        this(new java.io.StringReader(string));
     }
 
-    public CharReader(Reader reader, int bufferSize) {
+    public CharReader(Reader reader) {
         this.reader = reader;
-        this.raw = new StringBuilder(bufferSize);
-    }
-
-    public StringBuilder raw() {
-        return raw;
     }
 
     public boolean next() throws IOException {
@@ -38,7 +32,6 @@ public class CharReader {
 
     public char character() {
         char c = (char) value;
-        raw.append(c);
         value = -1;
         return c;
     }
