@@ -1,0 +1,7 @@
+plugins {
+    id "java"
+}
+
+group "me.dags"
+version "1.0-SNAPSHOT"
+sourceCompatibility = 1.8
