@@ -3,7 +3,7 @@
 ## Syntax
 Templates take the following form:
 ```
-"Hello {name}" + {name: "world"} => "Hello World"
+"Hello {name}" + {name: "World"} => "Hello World"
 ```
 The text between the braces ("{}") is used as a key/getter for a value held in the root object.  
 To refer to the root object itself, you can use the `{.}` notation.
