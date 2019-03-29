@@ -65,7 +65,7 @@ Context context = Context.of("user", supplier);
 // prints "Hello Garry!"
 template.apply(context, System.out);
 ```
-_The template reflectively calls 'Suppier.get()' to retrieve the value._
+_The template reflectively calls 'Supplier.get()' to retrieve the value._
 
 #### Iterable value rendering:
 ```
