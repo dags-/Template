@@ -1,4 +1,5 @@
 # Template
+[![](https://jitpack.io/v/dags-/Template.svg)](https://jitpack.io/dags-/Template)
 
 ## Syntax
 Templates take the following form:
